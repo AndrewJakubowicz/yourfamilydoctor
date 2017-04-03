@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Knoxfield & Colchester Medical Centres</title>
+    <meta name="description" content="A full range of family medicine general practice services."/>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+
+    <!--meta tags to help FACEBOOK display your content-->
+    <meta property="og:url"     content="http://www.yourfamilydoctor.com.au/" />
+    <meta property="og:type"    content="website" />
+    <meta property="og:locale"    content="en_AU" />
+    <meta property="og:title"   content="Knoxfield & Colchester Medical Centres" />
+    <meta property="og:description" content="Living healthier, home and abroad – our mission statement reflecting our twin roles of comprehensive family medical practice and travel medicine service." />
+    <!--<meta property="og:image"   content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />-->
+
+    <!--TWIITER meta tags-->
+
+    {{ partial "meta.html" . }}
+
+    
+
+
+</head>
+<body>
+<nav class="fixed-nav-bar">
+    <!--Fixed navigation bar-->
+    <div>
+        <input type="checkbox" id="show-menu" role="button">
+        <label for="show-menu" class="show-menu"><img src="images/glyphicons/png/glyphicons-517-menu-hamburger.png">Menu</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/Practice_Information.html">Practice Information</a>
+                <ul class="hidden">
+                    <li><a href="pages/Health_Practitioners.html">Our Staff</a></li>
+                    <li><a href="pages/Practice_Hours.html">Surgery Hours</a></li>
+                    <li><a href="pages/New_Patients.html">New Patients</a></li>
+                    <li><a href="pages/Parking.html">Parking</a></li>
+                    <li><a href="pages/Appointment_Info.html">Appointments</a></li>
+                    <li><a href="pages/Children_and_Babies.html">Children and Babies</a></li>
+                    <li><a href="pages/Disabled_Info.html">Disabled Facilities</a></li>
+                    <li><a href="pages/Practice_Fees.html">Practice Fees</a></li>
+                    <li><a href="pages/Results_Info.html">Test Results and Xrays</a></li>
+                    <li><a href="pages/Referrals_Info.html">Referrals</a></li>
+                    <li><a href="pages/Telephoning_Info.html">Telephoning Your Doctor</a></li>
+                    <li><a href="pages/Home_visit_info.html">Home Visits</a></li>
+                    <li><a href="pages/Repeat_Prescriptions_Info.html">Repeat Prescriptions</a></li>
+                    <li><a href="pages/Reminder_System.html">Reminder System</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/Services.html">Services</a>
+                <ul class="hidden">
+                    <li><a href="pages/Chronic_disease_management.html">Chronic disease management</a></li>
+                    <li><a href="pages/Opiate_Addiction_Program.html">Opiate Addiction Program</a></li>
+                    <li><a href="pages/UV_Light_Info.html">UV Light Therapy</a></li>
+                    <li><a href="pages/Pathology%20Collection.html">Pathology Collection</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/Travel_Medicine.html">Travel Medicine</a></li>
+            <li><a href="pages/Contact%20Us.html">Contact us</a></li>
+        </ul>
+    </div>
+</nav>
+    <div id="home-back" class="grid-container">
+        <header class="header-banner">
+            <!--This is the top of the home page-->
+            <div>
+                <span class="banner-title">Knoxfield & Colchester Medical Centres</span>
+                <span class="banner-sub">and Travel Doctor
+                    <br />
+                    <span class="strBlue">living healthier,</span><span class="lightBlue"> home and abroad</span></span>
+            </div>
+        </header>
+        <!--TODO: refactor this out.-->
+        <div class="row" style="text-align: center; padding:20px;">
+            <p style="margin-bottom: 30px;">At Knoxfield and Colchester Medical Centres our doctors are committed to providing the best care for you and your family.</p>
+            <p style="margin-bottom: 30px;">We aim to provide a comprehensive range of services that are not found in smaller practices and use the most up to date medical equipment and sterilizing techniques.</p>
+            <p style="margin-bottom: 30px;">We are also <b><u>Government Authorised Travel Vaccination Centres</u></b> offering a full travel medicine service.</p>
+            <p style="margin-bottom: 10px;">We stock all vaccines and a range of travel related products.</p>
+        </div>
+        <div class="row">
+            <article class="col-6 primary-accent booking">
+                <div>
+                    <h1><img src="images/glyphicons/png/glyphicons-443-earphone.png">Book by phone</h1>
+                    <div>
+                        <h2>Colchester</h2>
+                        <h2><a class="phone-nums" href="tel:0397205515">(03) 9720-5515</a></h2>
+                    </div>
+                    <div>
+                        <h2>Knoxfield</h2>
+                        <h2><a class="phone-nums" href="tel:0398019055">(03) 9801-9055</a></h2>
+                    </div>
+                    <div>
+                        <span class="font-size-22">After-Hours</span>
+                        <span class="font-size-22"><a class="phone-nums" href="tel:1902260044">1902-260-044</a><sup>*</sup></span>
+                    </div>
+                </div>
+            </article>
+            <article class="col-6 secondary-accent booking">
+                <div>
+                    <h1><img src="images/glyphicons/png/glyphicons-164-iphone.png">Book Online</h1>
+                    <a href="pages/Booking_Colchester.html" class="buttonHome">Click here for Colchester</a>
+                    <a href="pages/Booking_Knoxfield.html" class="buttonHome">Click here for Knoxfield</a>
+                </div>
+            </article>
+        </div>
+        <div class="row infobar">
+            <article class="col-3">
+                <h2>Locations</h2>
+                <div class="widthQuarter">
+                    <div>
+                        <img src="images/glyphicons/png/glyphicons-243-map-marker.png">
+                        <span>310 Colchester Rd,<br />Bayswater North VIC 3153</span>
+                    </div>
+                    <div>
+                        <img src="images/glyphicons/png/glyphicons-243-map-marker.png">
+                        <span>34 Riddell Rd,<br />Wantirna South VIC 3152</span>
+                    </div>
+                </div>
+                <a href="pages/Locations.html">View Locations</a>
+            </article>
+            <article class="col-3 table-center">
+                <h2>Trading hours</h2>
+                <table>
+                    <tr>
+                        <td>Mon - Fri</td>
+                        <td>9am - 6pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>9am - 1pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>CLOSED</td>
+                    </tr>
+                </table>
+                <a href="pages/Practice_Hours.html">View extended hours</a>
+            </article>
+            <article class="col-3">
+                <div class="widthQuarter">
+                    <h2>Services Overview</h2>
+                    <ul>
+                        <li>Men’s, Women’s & Kid’s Health</li>
+                        <li>Travel Medicine</li>
+                        <li>Skin Clinic</li>
+                        <li>Acupuncture</li>
+                        <li>Allied Health</li>
+                        <li>Mental & Addiction Services</li>
+                    </ul>
+                </div>
+                <a href="pages/Services.html">View all Services</a>
+            </article>
+            <article id="billing" class="col-3">
+                <h2>Our Fees</h2>
+                <p>We offer Bulk Billing for children, students, concession Card holders, pensioners and others.</p>
+                <a href="pages/Practice_Fees.html">View full list of Fees</a>
+            </article>
+        </div>
+        <div id="logo" class="row">
+            <!--Logo of clinic-->
+        </div>
+        <div id="booking_forms" class="row">
+            <!--Booking forms-->
+            <h2>Don't want to fill out forms when you arrive?</h2>
+            <h3>Fill them out now!</h3>
+            <div>
+                <a class="buttonHome" target="_blank" href="pdfs/New%20Patient%20Form.pdf">I'm new to the practice</a>
+                <a class="buttonHome" target="_blank" href="pdfs/New%20Patient%20Form%20Travel.pdf">I'm travelling</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <!--This will have all the secondary navigation-->
+        <div id="footer-logo">
+            <span class="banner-title"><b><span class="strBlue">familydoctor</span><span class="lightBlue">.melbourne</span></b></span>
+            <span class="banner-sub">AND TRAVEL MEDICINE</span>
+        </div>
+        <div id="footer-special-logo">
+            <ul>
+                <!--<li><img src="images/logos/img-agpal-accredited.png"></li>-->
+            </ul>
+        </div>
+        <div id="footer-social-media">
+            <ul id="footer-social-menu">
+                <li><a target="_blank" href="https://www.facebook.com/ColchesterMedCtr/"><img src="images/glyphicons-social/png/glyphicons-social-31-facebook.png"></a></li>
+                <!--<li><a><img src="images/glyphicons-social/png/glyphicons-social-32-twitter.png"></a></li>-->
+                <li><img src="images/logos/img-agpal-accredited.png"></li>
+				<li><img title="Free wifi at both clinics" src="images/logos/Sowifi_logo.png"></li>
+            </ul>
+        </div>
+        <div id="footer-menu-inline">
+            <ul id="footer-primary-menu">
+                <li><a href="pages/Accreditation.html">Accreditation</a></li>
+                <li><a href="pages/Your_Rights.html">Your Rights</a></li>
+                <li><a href="pages/Zero_Tolerance_Info.html">Zero Tolerance Policy</a></li>
+                <li><a href="pages/Unacceptable_Behaviour_Policy.html">Unacceptable Behaviour Policy</a></li>
+                <li><a href="pages/Legal.html">Legal</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul id="footer-emergency-menu">
+                <li>Suicide Line: <a class="phone-nums" href="tel:1300651251">1300 651 251</a></li>
+                <li>|</li>
+                <li>Life Line: <a class="phone-nums" href="tel:131114">13 11 14</a></li>
+                <li>|</li>
+                <li>Poisons Information: <a class="phone-nums" href="tel:131126">13 11 26</a></li>
+            </ul>
+        </div>
+        <p><span id="author-tag">Created by Andrew Jakubowicz</span></p>
+        <div id="asterix">
+            <span><sup>*</sup> Charges apply ($5.50/min & maybe higher for mobiles or payphones)</span>
+        </div>
+    </footer>
+
+    <!--Script Tags-->
+    <script type="text/javascript" src="scripts/nav_bar.js"></script>
+</body>
+</html>
