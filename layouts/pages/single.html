@@ -4,13 +4,27 @@
     <title>{{ .Title }}</title>
     <meta charset="UTF-8">
     <meta name="description" content="{{ .Description }}">
+
+    {{ partial "meta.html" . }}
+
 </head>
 <body>
-    <main>
-        <article>
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-        </article>
-    </main>
+    {{ partial "navBar.html" }}
+
+    <div class="grid-container">
+    <div class="row pageContent">
+        <div class="col-9">
+            <!--Content goes in here.-->
+            <article>
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+            </article>
+        </div>
+
+        <!--Ends with the sidebar-->
+        {{ partial "aside.html" }}
+    </div>
+</div>
+{{ partial "footer.html" }}
 </body>
-<html>
+</html>
