@@ -24,44 +24,7 @@
 
 </head>
 <body>
-<nav class="fixed-nav-bar">
-    <!--Fixed navigation bar-->
-    <div>
-        <input type="checkbox" id="show-menu" role="button">
-        <label for="show-menu" class="show-menu"><img src="images/glyphicons/png/glyphicons-517-menu-hamburger.png">Menu</label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/Practice_Information.html">Practice Information</a>
-                <ul class="hidden">
-                    <li><a href="pages/Health_Practitioners.html">Our Staff</a></li>
-                    <li><a href="pages/Practice_Hours.html">Surgery Hours</a></li>
-                    <li><a href="pages/New_Patients.html">New Patients</a></li>
-                    <li><a href="pages/Parking.html">Parking</a></li>
-                    <li><a href="pages/Appointment_Info.html">Appointments</a></li>
-                    <li><a href="pages/Children_and_Babies.html">Children and Babies</a></li>
-                    <li><a href="pages/Disabled_Info.html">Disabled Facilities</a></li>
-                    <li><a href="pages/Practice_Fees.html">Practice Fees</a></li>
-                    <li><a href="pages/Results_Info.html">Test Results and Xrays</a></li>
-                    <li><a href="pages/Referrals_Info.html">Referrals</a></li>
-                    <li><a href="pages/Telephoning_Info.html">Telephoning Your Doctor</a></li>
-                    <li><a href="pages/Home_visit_info.html">Home Visits</a></li>
-                    <li><a href="pages/Repeat_Prescriptions_Info.html">Repeat Prescriptions</a></li>
-                    <li><a href="pages/Reminder_System.html">Reminder System</a></li>
-                </ul>
-            </li>
-            <li><a href="pages/Services.html">Services</a>
-                <ul class="hidden">
-                    <li><a href="pages/Chronic_disease_management.html">Chronic disease management</a></li>
-                    <li><a href="pages/Opiate_Addiction_Program.html">Opiate Addiction Program</a></li>
-                    <li><a href="pages/UV_Light_Info.html">UV Light Therapy</a></li>
-                    <li><a href="pages/Pathology%20Collection.html">Pathology Collection</a></li>
-                </ul>
-            </li>
-            <li><a href="pages/Travel_Medicine.html">Travel Medicine</a></li>
-            <li><a href="pages/Contact%20Us.html">Contact us</a></li>
-        </ul>
-    </div>
-</nav>
+{{ partial "navBar.html" }}
     <div id="home-back" class="grid-container">
         <header class="header-banner">
             <!--This is the top of the home page-->
