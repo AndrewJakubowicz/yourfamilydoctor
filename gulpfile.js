@@ -5,7 +5,7 @@ var gulp         = require("gulp"),
 
 // Compile SCSS files to CSS
 gulp.task("scss", function () {
-    gulp.src("src/scss/**/*.scss")
+    gulp.src("src/scss/**/*.sass")
         .pipe(sass({
             outputStyle : "compressed"
         }))

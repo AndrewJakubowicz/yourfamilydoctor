@@ -1,0 +1,770 @@
+// Contents
+  ---------------
+  Imports
+  Typography
+  Padding reset
+  Button Class
+  GRID layout
+    IE10 responsive design viewport
+    page container - grid container
+    row
+    col
+      col-1
+      ...
+      col-12
+  Navigation
+  Home banner
+  Articles
+    Bookings
+    infobar
+  Logo
+  Booking Forms
+  Footer
+  Background classes
+    primary-accent
+    secondary-accent
+    default-background
+  Page Content
+  Fee-table
+  Clearfix
+
+  Tablet css (included in each section)
+  Mobile display (included in each section)
+
+
+
+
+
+
+
+@import "global_variables"
+
+// ---- Typography
+// Font family
+h1, h2, h3, h4, p, span, a, li, td
+  font-family: 'Raleway', sans-serif
+h1, h2, h3, h4
+  font-family: 'Montserrat', sans-serif
+
+h1, h2, h3, h4, p, span
+  color: $font-head-color
+
+.strBlue
+  color: $strongBlue
+  display: inline
+.lightBlue
+  color: $lightBlue
+  display: inline
+
+a
+  cursor: pointer
+  color: $hyperlink-color
+a:hover
+  color: #20415a
+a:visited
+  color: $hyperlink-color
+a:active
+  color: #58aaf1
+
+h1
+  font-size: $font-size-36
+h2
+  font-size: $font-size-24
+p
+  font-size: $font-size-16
+  margin-bottom: 15px
+
+// This fixes the asterisk from interfering with line height.
+sup
+  vertical-align: top
+  position: relative
+  top: -0.3em
+
+.text-center
+  text-align: center
+
+.font-size-22
+  font-size: $font-size-22
+
+// ---- Padding reset
+*
+  margin: 0
+  padding: 0
+
+
+// ---- Button class
+.buttonHome
+  display: block
+  margin-bottom: 1.25em
+  padding: 5px 0 5px 0
+  background: $accent-strong
+  border: 5px solid $accent-strong
+
+  &:hover
+    background: #F2C692
+    border: 5px solid #F2C692
+    text-decoration: underline
+
+
+// GRID layout
+/* IE10 responsive design viewport
+@-ms-viewport
+  width: extend-to-zoom
+  zoom: 1.0
+
+.grid-container
+  width: 100%
+  max-width: 100%
+  // OPTIONAL BACKGROUND COLOR BARS
+  //background-color: #f5f9fe
+
+#home-back
+  background-color: white
+
+/* This content is from: http://inspirationalpixels.com/tutorials/grid-system-with-sass
+.row
+  @extend %clearfix
+
+  & + &
+    margin-top: $grid-spacing
+
+[class^="col-"]
+  float: left
+  margin-right: $grid-spacing
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:last-child
+    margin-right: 0
+
+// Mobile column (single width)
+[class*="col-"]
+  width: 100%
+// Tablet 50% columns.
+@include tablet
+  [class*="col-"]
+    width: 50%
+  // OVERRIDE for while content is 9 thick.
+  .col-9
+    width: 100%
+//----- Columns (Automatic)
+@include desktop
+  .col-1
+    width: (100% / 12) - ($grid-spacing * 11 / 12)
+  .col-2
+    width: (100% / 6) - ($grid-spacing * 10 / 12)
+  .col-3
+    width: (100% / 4) - ($grid-spacing * 9 / 12)
+  .col-4
+    width: (100% / 3) - ($grid-spacing * 8 / 12)
+  .col-5
+    width: (100% / 2.4) - ($grid-spacing * 7 / 12)
+  .col-6
+    width: (100% / 2) - ($grid-spacing * 6 / 12)
+  .col-7
+    width: (100% / 1.714285714285714) - ($grid-spacing * 5 / 12)
+  .col-8
+    width: (100% / 1.5) - ($grid-spacing * 4 / 12)
+  .col-9
+    width: (100% / 1.333333333333333) - ($grid-spacing * 3 / 12)
+  .col-10
+    width: (100% / 1.2) - ($grid-spacing * 2 / 12)
+  .col-11
+    width: (100% / 1.090909090909091) - ($grid-spacing * 1 / 12)
+  .col-12
+    width: 100%
+
+// ----- Navigation
+  7 Items means that each item can be fit into
+  100% / 7 = 14.285%
+  Therefore use inline-block and width to space evenly.
+.fixed-nav-bar
+  ul
+    display: inline-block
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+
+
+  position: fixed
+  display: table
+  top: 0
+  left: 0
+  z-index: 1050
+  width: 100%
+  height: $nav-height
+  background-color: $nav-colour
+  text-align: center
+  border-bottom: 1px solid #dee6d8
+  div
+    vertical-align: middle
+    display: table-cell
+    width: 100%
+    ul
+      width: 100%
+  div ul li
+    display: inline-block
+    // This percentage has to be changed if NAV is changed.
+    width: 13.8%
+    text-align: center
+    position: relative
+    padding-top: 25px
+    padding-bottom: 25px
+    a
+      text-decoration: none
+  li:hover
+    text-decoration: underline
+    background-color: #fafafa
+  div ul li:hover ul li:hover
+    text-decoration: underline
+    background-color: #fafafa
+  // Hide dropdown until needed
+  div ul li ul
+    display: none
+    position: absolute
+
+  // Make dropdown links vertical
+  div ul li ul li
+    &:first-child
+      margin-top: 26px
+    position: relative
+    display: block
+    float: none
+    // Prevent text wrap
+    width: auto
+    min-width: 13.7%
+    padding: 8px 0 8px 0
+    background-color: rgb(247, 254, 255)
+  div ul li:hover a + .hidden, .hidden:hover
+    display: block
+
+  // Deactivate drop-menu from mobiles.
+  @include mobile
+    div ul li:hover a + .hidden, .hidden:hover
+      display: none
+
+  @include mobile
+    .show-menu
+      display: block
+      background-color: $lightBlue
+      padding: 25px 0 25px 0
+      font-size: $font-size-24
+      color: #0d101b
+      img
+        padding-right: 10px
+    div ul
+      position: static
+      display: none
+      li
+        margin-bottom: 0
+        margin-top: 0
+        padding: 12px 0
+        width: 100%
+        ul
+          position: static
+          li
+            position: static
+            padding: 10px 10px
+            &:first-child
+              margin-top: 10px
+
+      ul li, li a
+        width: 100px
+
+.show-menu
+  text-decoration: none
+  text-align: center
+  display: none
+  &:hover
+    background-color: #6cadbe
+// Hide checkbox
+input[type=checkbox]
+  display: none
+
+// Show menu when invisible checkbox is ticked
+input[type=checkbox]:checked ~ ul
+  display: block
+// colours in the show-menu when it is selected.
+input[type=checkbox]:checked ~ .show-menu
+  background-color: #65a2b2
+
+// ----- Home banner
+.header-banner
+  height: $header-banner
+  width: 100%
+  background: url(../images/clinic_photos/img_surgery.jpg) no-repeat center center fixed
+  background-size: auto 100%
+  background-position-y: 0px
+  @include desktop
+    background-size: 100% auto
+    background-position-y: -200px
+  @include tablet
+    background-size: 100% auto
+  div
+    padding-top: $nav-height * 1.5
+    text-align: center
+
+  .banner-title, .banner-sub
+    display: block
+    padding-top: 20px
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4)
+    @include mobile
+      padding-top: 20px
+  .banner-title
+    font-size: 2.5em
+    font-weight: 900
+    padding-top: 60px
+  .banner-sub
+    font-size: 2em
+    font-weight: 600
+    @include mobile
+      font-size: 1.5em
+// ---- Articles
+article
+  &.primary-accent, &.secondary-accent
+    height: $article-height-260
+  // -- Booking articles
+  &.booking
+    text-align: center
+    div:first-child
+      display: inline-block
+      width: 20em
+      margin: 2.25em auto
+      // These are the divs inside the article div.
+      div
+        width: inherit
+        display: inline-block
+        h2:nth-child(odd)
+          float: left
+        h2:nth-child(even)
+          float: right
+        span
+          font-size: $font-size-20
+        span:nth-child(odd)
+          float: left
+        span:nth-child(even)
+          float: right
+      h1
+        margin-bottom: 0.8em
+        img
+          padding-right: 0.25em
+      h2, span
+        display: inline-block
+        margin-bottom: 0.375em
+
+// -- infobar
+@include mobile
+  .infobar article
+    border-bottom: 1px solid #f0f0f0
+  .infobar article:last-child
+    border-bottom: 0
+
+.infobar
+  article
+    position: relative
+    padding: 5px
+    // This is the height of the whole infobar. MODIFY with content.
+    height: 240px
+    @include desktop
+      height: 300px
+    @include tablet
+      height: 270px
+    a
+      // This lines up all the links perfectly
+        https://www.sitepoint.com/css-center-position-absolute-div/
+      display: block
+      text-align: center
+      width: 180px
+      position: absolute
+      bottom: 10px
+      // Re-align bottom link for desktop and tablet.
+      @include desktop
+        bottom: 36px
+      @include  tablet
+        bottom: 36px
+      left: 50%
+      margin-left: -90px
+      text-decoration: underline
+
+    h2
+      text-align: center
+      padding-top: 1.5em
+      padding-bottom: 1em
+    div p
+      text-align: left
+    .widthQuarter
+      text-align: center
+      div
+        display: block
+        max-width: 246px
+        margin: 0 auto 1.25em auto
+      img
+        display: inline-block
+        float: left
+        // Centers img w/ text
+        padding-top: 5px
+      li
+        margin: 0 auto 0 auto
+        max-width: 230px
+        text-align: left
+  .table-center
+    text-align: center
+    table
+      display: inline-block
+      border-spacing: 0
+      tr:nth-child(odd) td
+        padding: 10px 20px 10px 20px
+        background-color: $primary-back-accent
+      tr:nth-child(even) td
+        padding: 5px
+        background-color: $secondary-back-accent
+  ul
+    padding-left: 15px
+  #billing p
+    text-align: center
+
+//---- Logo
+#logo
+  position: absolute
+  right: 0
+  left: 0
+  margin-left: auto
+  margin-right: auto
+  display: inline-block
+  background: url(../images/familydoctor.melbourne%20Logo%20notext_mob.png)
+  height: 88px
+  width: 114px
+
+  @include tablet
+    background: url(../images/familydoctor.melbourne%20Logo%20notextx1.png)
+    height: 176px
+    width: 228px
+  @include desktop
+    background: url(../images/familydoctor.melbourne%20Logo%20notextx1.png)
+    height: 176px
+    width: 228px
+
+
+
+//---- Booking Forms
+#booking_forms
+  min-height: 350px
+
+
+  margin: 50px 0 0 0
+  // This gets changed by tablet and desktop
+    Padding has to change based on img size
+  h2
+    padding-top: 50px
+    color: white
+  @include tablet
+    margin: 100px 0 0 0
+    h2
+      padding-top: 110px
+  @include desktop
+    margin: 100px 0 0 0
+    h2
+      padding-top: 110px
+  padding: 0 0 0 0
+  background-image: radial-gradient(92% 294%, #4CA5B6 100%, #ADD8E2 100%)
+  text-align: center
+  h3
+    padding-top: 26px
+    color: white
+  div
+    padding-top: 40px
+    padding-bottom: 45px
+    a
+      display: block
+      padding: 10px 0 10px 0
+      width: 300px
+      margin: 0 auto 20px auto
+    @include tablet
+      a
+        display: inline-block
+        width: 300px
+        margin: 0 0 0 0
+      a:first-child
+        margin-right: 30px
+    @include desktop
+      a
+        display: inline-block
+        width: 300px
+        margin: 0 0 0 0
+      a:first-child
+        margin-right: 30px
+
+// ---- Footer
+footer
+  // This is the logo in the footer
+  #footer-logo-notext
+    display: block
+    position: relative
+    img
+      position: absolute
+      display: none
+
+
+
+  padding: 100px 20px 20px 20px
+  @include tablet
+    padding: 100px 100px 0 100px
+  @include desktop
+    padding: 100px 100px 0 100px
+    // Only allow footer logo to be visible on desktop
+    #footer-logo-notext img
+      display: inline-block
+      right: 0
+      left: 0
+      margin: 0 auto
+      top: -200px
+
+  background-color: #2d2f2c
+  color: white
+  span
+    display: block
+  h2
+    color: #d4d4d4
+  #footer-logo
+    margin-bottom: 50px
+  .banner-title
+    font-size: 1.5em
+    @include tablet
+      font-size: 2.25em
+    @include desktop
+      font-size: 2.25em
+  .banner-sub
+    padding-top: 0.5em
+    font-size: 1em
+    color: #f2f2f2
+  div
+    text-align: center
+    ul
+      list-style-type: none
+      display: inline-block
+      margin: 10px 0 20px 0
+      li
+        display: inline-block
+        img
+          height: 50px
+          width: auto
+    #footer-social-menu li
+      padding: 0 10px 0 10px
+    #footer-primary-menu
+      li
+        padding: 0 3px 0 3px
+        a
+          font-size: 0.75em
+          text-decoration: underline
+    #footer-emergency-menu li:nth-child(even)
+      color: #2ec4e6
+      padding: 0 3px
+
+  #asterix span
+    color: #dddddd
+    font-size: 10px
+    padding: 30px 0 5px 0
+
+
+// ----- Background classes
+.primary-accent
+  background-color: $primary-back-accent
+
+.secondary-accent
+  background-color: $secondary-back-accent
+
+.default-bacgkround
+  background-color: $background-main
+
+
+// ----- Page Content
+.pageContent
+  background-color: white
+  padding-top: $nav-height
+  padding-bottom: 0
+  @include desktop
+    padding-bottom: $nav-height * 1.2
+  max-width: $desktop-width
+  @include desktop
+    margin: 0 auto
+  h1
+    padding: 60px 0 20px 0
+    color: $h1color
+  h2
+    padding: 14px 0 14px 0
+    color: $h2color
+  h3
+    padding: 10px 0 10px 0
+    color: $h3color
+  p
+    color: $pcolor
+    line-height: $font-size-mainContent * $line-height-multiplier
+    font-size: $font-size-mainContent
+  .col-9
+    margin-bottom: 50px
+  div article
+    // Styles for each article in the content.
+    max-width: 600px
+    margin: 0 auto
+    padding: 0 25px
+    margin-bottom: 15px
+    ul, ol
+      padding-left: 35px
+      li
+        text-align: justify
+        line-height: ($font-size-16 * $line-height-multiplier)
+        font-size: $font-size-16
+
+  // Clinic Information page menu
+  #clinic_information_menu
+    ul
+      list-style-type: none
+      display: inline-block
+      margin: 10px 0 20px 0
+      padding: 0
+      li
+        font-family: 'Montserrat', sans-serif
+        display: inline-block
+        width: 32%
+        background-color: #dae3e6
+        margin: 0 auto 10px auto
+        padding: 15px 0 15px 0
+        text-align: center
+        @include mobile
+          width: 49%
+          padding: 10px 0 10px 0
+  #clinic_information_menu.half_menu
+    ul li
+      width: 49%
+
+  .imgWrapRight
+    clear: left
+    float: right
+    margin: 10px
+  .imgWrapLeft
+    clear: right
+    float: left
+    margin: 10px
+    margin-left: 0
+
+  .imgWrapMiddle
+    display: block
+    margin: 10px auto 10px auto
+    max-width: 100%
+
+.phone-nums
+  text-decoration: none
+
+
+aside
+  width: 100%
+  display: inline-block
+  article
+    &.primary-accent, &.secondary-accent
+      height: $aside-height-320
+      @include desktop
+        height: auto
+    // -- Booking articles
+    &.booking-aside
+      text-align: center
+      h1
+        @include desktop
+          font-size: $font-size-20
+      div:first-child
+        display: inline-block
+        width: 20em
+        @include desktop
+          width: 90%
+        margin: 2.25em auto
+        // These are the divs inside the article div.
+        div
+          width: inherit
+          display: inline-block
+          img
+            float: left
+            @include desktop
+              display: none
+          h2
+            // Hardcoded to always work. Firefox had an overlapping bug. (Should be fixed)
+            @include desktop
+              font-size: 0.9em
+          h2:nth-child(odd)
+            float: left
+            //@include desktop
+            //  float: none
+            //  display: block
+            //  margin-bottom: 0
+          h2:nth-child(even)
+            float: right
+            //@include desktop
+            //  float: none
+
+          span
+            font-size: $font-size-20
+            @include desktop
+              display: block
+              font-size: $font-size-16
+          span:nth-child(odd)
+            float: left
+            //@include desktop
+            //  float: none
+          span:nth-child(even)
+            float: right
+            @include desktop
+              float: none
+        h1
+          padding-top: 5px
+          margin-bottom: 0.8em
+          @include desktop
+            margin-bottom: 0.3em
+          img
+            padding-right: 0.25em
+        h2, span
+          display: inline-block
+          margin-bottom: 0.375em
+          padding-top: 0
+    display: block
+    float: none
+    @include tablet
+      float: left
+      display: inline-block
+      width: 50%
+    @include desktop
+      float: left
+      display: inline-block
+      width: 100%
+  @include tablet
+    display: block
+    width: 100%
+  @include desktop
+    display: inline-block
+    width: (100% / 4) - ($grid-spacing * 9 / 12)
+
+  .marker-pad
+    padding-top: 5px
+
+#fee-table
+  margin: 10px
+  text-align: center
+  border-spacing: 0
+  border-bottom: thin solid #bfbfbf
+  th
+    font-size: $font-size-20
+    height: 80px
+    padding: 10px
+    background-color: #dfeff2
+  td
+    max-width: 300px
+    padding: 10px
+
+  tr:nth-child(odd)
+    background-color: #f0fafc
+
+// ---- Clearfix for floating images inside a constaint.
+.panelForFloat
+  @extend %clearfix
+
+

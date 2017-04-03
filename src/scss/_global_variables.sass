@@ -1,0 +1,81 @@
+// Contents
+  ----------
+  Typography
+  Navigation
+  Home Header
+  Home articles
+  Colours
+    Accents
+    Primary Background
+  Grid System
+  Extends
+  Mixins for various screens
+
+
+// Typography
+$font-stack: Helvatica, sans-serif
+$font-size-36: 2em
+$font-size-24: 1.25em
+$font-size-22: 1.125em
+$font-size-20: 1.1em
+$font-size-16: 1em
+$font-size-mainContent: 1.1em
+$font-head-color: #3a3a3a
+$hyperlink-color: #407bac
+$line-height-multiplier: 1.4
+// ---- Font colors
+$h1color: #2f2f2f
+$h2color: #183c50
+$h3color: #1c455c
+$pcolor: #0c0e19
+
+// ---- Navigation
+$nav-height: 70px
+$nav-colour: rgb(255, 255, 255)
+
+// ---- Home header
+$header-banner: 440px
+
+// ---- Home articles
+$article-height-260: 260px
+$article-height-360: 360px
+
+// ---- Aside height
+$aside-height-320: 320px
+
+// Colours
+
+// --Accents--
+$primary-back-accent: #FFF5E9
+$secondary-back-accent: #FFF9F4
+$accent-strong: #F8CC98
+
+// --Primary Background--
+$background-main: #FFFFFF
+$strongBlue: #00B4D7
+$lightBlue: #83D3E7
+
+//----- Grid System
+$grid-spacing: 0
+
+//----- Extends
+%clearfix:after
+  display: block
+  clear: both
+  content: ''
+
+// ----- Mixins for various screens
+$tablet-width: 768px
+$desktop-width: 1024px
+
+@mixin mobile
+  @media (max-width: #{$tablet-width})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+@mixin desktop
+  @media (min-width: #{$desktop-width})
+    @content
