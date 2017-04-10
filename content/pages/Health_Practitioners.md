@@ -1,4 +1,10 @@
-# Our health care providers:
++++
+title = "Health Practitioners"
+description = "Our staff"
+date = "2017-04-03"
++++
+
+## Our health care providers:
 
 
 <div class="panelForFloat">
@@ -37,7 +43,8 @@
     <p>She is available at both clinics.</p>
 </div>
 
-<h1>Allied Health</h1>
+## Allied Health
+
 <div class="panelForFloat">
     <h2>Foster Physiotherapy - Mark & Joan Foster</h2>
     <img class="imgWrapMiddle" src="/images/practitioners/joan-mark-physio.jpeg">
@@ -113,7 +120,7 @@ Knoxfield - Christine Perea
 </div>
 
 
-<h1>Nurses</h1>
+## Nurses
 
 <div class="panelForFloat">
     <h2>Shirlie - Credentialed Pap Nurse</h2>
@@ -129,7 +136,7 @@ Knoxfield - Christine Perea
     <h2>Danni</h2>
 </div>
 
-<h2>Administration Staff</h2>
+## Administration Staff
 
 <div class="panelForFloat">
     <h2>Nicole - Practice Manager</h2>
